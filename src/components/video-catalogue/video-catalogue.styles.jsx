@@ -14,7 +14,8 @@ export const CarouselStyled = styled(Carousel)`
 `;
 
 export const VideoCatalogueContainer = styled.div`
-  margin-top: 30px;
+  margin-top: 50px;
+  margin-bottom: 90px;
   overflow: visible;
 `;
 
