@@ -1,46 +1,62 @@
 import * as Styled from "./video-catalogue.styles";
 import { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import { Pagination, Navigation } from "swiper";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "./swiper.styles.scss";
 const circleIcon = <FontAwesomeIcon icon={faCirclePlay} />;
 
 const VideoCatalogue = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalVideo, setModalVideo] = useState(null);
 
   const toggleModal = () => setIsOpen(!modalIsOpen);
 
-  const openModal = () => {
+  const openModal = (video) => {
+    setModalVideo(video);
+    toggleModal();
+  };
+
+  const closeModal = () => {
     toggleModal();
   };
 
   const VideoArray = [
     {
-      filename:
-        "https://dx501lltpgacl.cloudfront.net/Amazon+-+Sustainability+Challenge.mp4",
+      video: "https://dx501lltpgacl.cloudfront.net/videos/Amazon+-+Sustainability+Challenge.mp4",
+      thumbnail: "https://dx501lltpgacl.cloudfront.net/thumbnails/AmazonSustainabilityChallenge.mp4.png",
       id: 1,
     },
     {
-      filename: "https://dx501lltpgacl.cloudfront.net/Amazon+X+Seenit.mp4",
+      video: "https://dx501lltpgacl.cloudfront.net/videos/Amazon+X+Seenit.mp4",
+      thumbnail: "https://dx501lltpgacl.cloudfront.net/thumbnails/AmazonXSeenit.mp4.png",
       id: 2,
     },
     {
-      filename:
-        "https://dx501lltpgacl.cloudfront.net/H%26M+-+Community+Meet+Up.mp4",
+      video: "https://dx501lltpgacl.cloudfront.net/videos/HandM+-+Community+Meet+Up.mp4",
+      thumbnail: "https://dx501lltpgacl.cloudfront.net/thumbnails/HandMCommunityMeetUp.mp4.png",
       id: 3,
     },
     {
-      filename:
-        "https://dx501lltpgacl.cloudfront.net/Seenit+-+Employee+Spotlight+(CS+-+Roxane).mp4",
+      video: "https://dx501lltpgacl.cloudfront.net/videos/Seenit+-+Employee+Spotlight+(CS+-+Roxane).mp4",
+      thumbnail: "https://dx501lltpgacl.cloudfront.net/thumbnails/SeenitEmployeeSpotlight(CSRoxane).mp4.png",
       id: 4,
     },
     {
-      filename:
-        "https://dx501lltpgacl.cloudfront.net/Sony+-+Customer+Showcase.mp4",
+      video: "https://dx501lltpgacl.cloudfront.net/videos/Sony+-+Customer+Showcase.mp4",
+      thumbnail: "https://dx501lltpgacl.cloudfront.net/thumbnails/SonyCustomerShowcase.mp4.png",
       id: 5,
     },
     {
-      filename: "https://dx501lltpgacl.cloudfront.net/V2.mp4",
+      video: "https://dx501lltpgacl.cloudfront.net/videos/V2.mp4",
+      thumbnail: "https://dx501lltpgacl.cloudfront.net/thumbnails/V2.mp4.png",
       id: 6,
     },
   ];
@@ -48,33 +64,45 @@ const VideoCatalogue = () => {
   return (
     <Styled.VideoCatalogueContainer>
       <h2>Here's what I've done...</h2>
-      <Styled.CarouselStyled
-        centerMode
-        showArrows
-        infiniteLoop
-        showStatus={false}
-        width="100%"
-        height="30%"
-      >
-        {VideoArray.map((video) => {
-          return (
-            <Styled.ThumbnailContainer
-              key={video.id}
-              onClick={() => {
-                openModal(video.filename);
-              }}
-            >
+      <Styled.VideoArrayContainer>
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={6}
+          slidesPerGroup={3}
+          loop={true}
+          loopFillGroupWithBlank={true}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
+          {VideoArray.map((video) => {
+            return (
+              <SwiperSlide onClick={() => openModal(video.video)}>
+                <Styled.IconWrapper className="icon">{circleIcon}</Styled.IconWrapper>
+                <video
+                  poster={video.thumbnail}
+                  onMouseOver={(event) => event.target.play()}
+                  onMouseOut={(event) => event.target.load()}
+                  src={video.video}
+                ></video>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+        <Styled.ModalContainer>
+          <Styled.StyledModal isOpen={modalIsOpen} onRequestClose={closeModal}>
+            <Styled.VideoWrapper>
               <Styled.VideoPlayer
-                className="react-player fixed-bottom"
-                controls={true}
-                url={video.filename}
+                url={modalVideo}
+                controls="true"
                 height="100%"
                 width="100%"
+                onRequestClose={closeModal}
               />
-            </Styled.ThumbnailContainer>
-          );
-        })}
-      </Styled.CarouselStyled>
+            </Styled.VideoWrapper>
+          </Styled.StyledModal>
+        </Styled.ModalContainer>
+      </Styled.VideoArrayContainer>
     </Styled.VideoCatalogueContainer>
   );
 };

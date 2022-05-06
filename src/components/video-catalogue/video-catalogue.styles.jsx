@@ -2,7 +2,9 @@ import styled from "styled-components";
 import ReactPlayer from "react-player/lazy";
 import Modal from "react-modal";
 import { Carousel } from "react-responsive-carousel";
+import { Swiper, SwiperSlide, SwiperStyle } from "swiper/react";
 Modal.defaultStyles.overlay.backgroundColor = "rgba(0, 0, 0, 0.75)";
+Modal.defaultStyles.overlay.zIndex = 1000;
 
 export const CarouselStyled = styled(Carousel)`
   margin-top: 40px;
@@ -13,14 +15,16 @@ export const CarouselStyled = styled(Carousel)`
 
 export const VideoCatalogueContainer = styled.div`
   margin-top: 30px;
+  overflow: visible;
 `;
 
 export const VideoArrayContainer = styled.div`
-  justify-content: center;
+  /* justify-content: center;
   flex-wrap: wrap;
   display: flex;
   margin-top: 30px;
   margin-bottom: 30px;
+  background: #eee; */
 `;
 
 export const VideoWrapper = styled.div`
@@ -32,7 +36,19 @@ export const VideoPlayer = styled(ReactPlayer)``;
 
 export const ModalContainer = styled.div`
   border: none;
+  overlay: {
+    zindex: 1000;
+  }
 `;
+
+// export const Slide = styled(SwiperSlide)`
+//   img {
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//   }
+// `;
 
 export const StyledModal = styled(Modal)`
   position: absolute;
@@ -60,14 +76,17 @@ export const ThumbnailWrapper = styled.span`
 export const IconWrapper = styled.div`
   position: absolute;
   z-index: 1;
+  left: 50%;
+  top: 50%;
+  pointer-events: none;
+  display: none;
 
   & .fa-circle-play {
     color: #e5e5e5;
     font-size: 1.5em;
-  }
-
-  &:hover {
-    filter: brightness(125%);
+    &:hover {
+      filter: brightness(125%);
+    }
   }
 
   ${({ modalIsOpen }) => modalIsOpen && "display: none"};

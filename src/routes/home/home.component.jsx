@@ -36,7 +36,7 @@ const Home = () => {
       <Styled.LineBreak />
       <Banner />
       <Styled.LineBreak />
-      <VideoCatalogue></VideoCatalogue>
+      <VideoCatalogue />
     </Styled.HomeContainer>
   );
 };

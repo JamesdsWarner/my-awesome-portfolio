@@ -53,6 +53,7 @@ export const MainImageContainer = styled.div`
   overflow: hidden;
   justify-content: center;
   transition: transform 0.2s;
+  position: relative;
 
   @media screen and (min-width: 961px) {
     margin-top: 90px;
@@ -76,7 +77,6 @@ export const MainImage = styled.img.attrs({
   src: `${myImage}`,
 })`
   width: 100%;
-
   &:hover {
     opacity: 0;
   }
@@ -85,10 +85,10 @@ export const MainImage = styled.img.attrs({
 export const MainImageBackground = styled.img.attrs({
   src: `${myImageBackground}`,
 })`
-  width: 100%;
   opacity: 0;
   position: absolute;
   transition: opacity 0.2s;
+  width: 100%;
 
   &:hover {
     opacity: 1;
