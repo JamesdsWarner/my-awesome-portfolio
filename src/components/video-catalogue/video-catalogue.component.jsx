@@ -74,6 +74,8 @@ const VideoCatalogue = () => {
           navigation={true}
           modules={[Pagination, Navigation]}
           className="mySwiper"
+          simulateTouch={false}
+          shortSwiper={false}
         >
           {VideoArray.map((video) => {
             return (
