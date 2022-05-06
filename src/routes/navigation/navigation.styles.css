@@ -1,0 +1,10 @@
+.fa-bars {
+    color: #fff;
+}
+
+@media screen and (max-width: 960px) {
+    .fa-times {
+        color: #fff;
+        font-size: 2rem;
+    }
+}
