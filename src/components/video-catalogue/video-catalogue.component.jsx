@@ -81,12 +81,7 @@ const VideoCatalogue = () => {
             return (
               <SwiperSlide onClick={() => openModal(video.video)}>
                 <Styled.IconWrapper className="icon">{circleIcon}</Styled.IconWrapper>
-                <video
-                  poster={video.thumbnail}
-                  onMouseOver={(event) => event.target.play()}
-                  onMouseOut={(event) => event.target.load()}
-                  src={video.video}
-                ></video>
+                <img src={video.thumbnail} />
               </SwiperSlide>
             );
           })}

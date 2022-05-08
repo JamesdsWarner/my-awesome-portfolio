@@ -8,6 +8,7 @@ export const BannerContainer = styled.div`
   box-shadow: 0 0 25px -13px #1d3557;
   text-align: center;
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   @media screen and (max-width: 1305px) {
     border-radius: 50px;
@@ -28,6 +29,7 @@ export const CompanySpan = styled.h2`
   margin: 25px;
   font-size: clamp(2rem, 8vw, 5rem);
   font-family: "Courgette", cursive;
+  text-shadow: 5px 5px #d3d3d3;
 `;
 
 export const Logo = styled.img`

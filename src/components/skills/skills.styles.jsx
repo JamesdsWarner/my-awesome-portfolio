@@ -6,6 +6,7 @@ export const SkillsContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 6%;
+  z-index: 1;
 
   @media screen and (min-width: 961px) {
     width: 740.156px;
@@ -32,4 +33,6 @@ export const SkillsHeader = styled.h2`
   font-size: 5rem;
   color: #264653;
   margin-top: 30px;
+  text-shadow: 5px 5px #d3d3d3;
+  z-index: 1;
 `;

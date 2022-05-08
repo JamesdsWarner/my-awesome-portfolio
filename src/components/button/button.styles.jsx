@@ -20,6 +20,7 @@ export const BaseButton = styled.button`
   font-size: 18px;
   color: #fff;
   cursor: pointer;
+  z-index: 10;
 
   &:hover {
     padding: 6px 18px;
@@ -89,13 +90,21 @@ export const ContactButton = styled(BaseButton)`
 
 export const LargeBaseButton = styled(BaseButton)`
   font-size: 24px;
+  box-shadow: rgba(0, 0, 0, 0.2) -1.95px -1.95px 4.6px;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 1.95px 1.95px 10.6px;
+  }
 `;
 
 export const LargeContactButton = styled(BaseButton)`
   background-color: ${contactColor};
   font-size: 24px;
+  box-shadow: rgba(0, 0, 0, 0.25) 1.95px 1.95px 4.6px;
+
   &:hover {
     color: ${contactColor};
     border: 2px solid ${contactColor};
+    box-shadow: rgba(0, 0, 0, 0.25) 1.95px 1.95px 10.6px;
   }
 `;

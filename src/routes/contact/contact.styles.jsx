@@ -14,7 +14,7 @@ export const ContactBox = styled(ContactContainer)`
   margin: -80px auto 0;
   z-index: -1;
   border-radius: 6px;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   opacity: 75%;
 `;
 
@@ -34,7 +34,7 @@ export const FormInputWrapper = styled.div`
 export const FormInput = styled.input`
   padding: 10px;
   border-radius: 6px;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border: 0;
   display: block;
   width: 25vw;
@@ -43,7 +43,7 @@ export const FormInput = styled.input`
 export const Message = styled.textarea`
   padding: 10px;
   border-radius: 6px;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   width: 25vw;
   border: 0;
   height: 100px;

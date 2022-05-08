@@ -13,6 +13,23 @@ export const HomeContainer = styled.div`
   padding-top: 40px;
 `;
 
+export const HomeBackground = styled.div`
+  background-image: url("https://www.transparenttextures.com/patterns/french-stucco.png");
+  z-index: 4;
+`;
+
+export const HomeBorderBackground = styled.div`
+  background-image: -webkit-linear-gradient(110deg, transparent 53%, #fff 53%);
+  z-index: 0;
+`;
+
+export const HomeGradientBackground = styled.div`
+  width: 100%;
+  min-height: 101vw;
+  position: relative;
+  background-image: linear-gradient(to bottom right, #c4dbf6, #3b8beb);
+`;
+
 export const LineBreak = styled.hr`
   border: 1px solid black;
   border-radius: 5px;
@@ -24,6 +41,7 @@ export const LineBreak = styled.hr`
 export const HomeTitle = styled.h2``;
 
 export const TitleContainer = styled.div`
+  z-index: 0;
   @media screen and (min-width: 961px) {
     margin-top: 120px;
   }
@@ -48,12 +66,13 @@ export const MainImageContainer = styled.div`
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 450px;
-  height: 500px;
+
   overflow: hidden;
   justify-content: center;
   transition: transform 0.2s;
   position: relative;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   @media screen and (min-width: 961px) {
     margin-top: 90px;
