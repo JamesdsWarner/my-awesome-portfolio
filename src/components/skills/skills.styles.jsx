@@ -26,13 +26,3 @@ export const SkillsLogoWrapper = styled.span`
     width: 112px;
   }
 `;
-
-export const SkillsHeader = styled.h2`
-  text-align: center;
-  font-family: "Courgette", cursive;
-  font-size: 5rem;
-  color: #264653;
-  margin-top: 30px;
-  text-shadow: 5px 5px #d3d3d3;
-  z-index: 1;
-`;

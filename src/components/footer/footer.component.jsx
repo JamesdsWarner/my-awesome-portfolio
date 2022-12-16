@@ -1,6 +1,6 @@
 import * as Styled from "./footer.styles";
 import Logo from "../logo/logo.component";
-import SeenitLogo from "../seenit-logo/seenit-logo.component";
+import SeenitLogo from "../github-logo/github-logo.component";
 
 const Footer = () => {
   return (

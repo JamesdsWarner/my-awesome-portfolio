@@ -4,11 +4,21 @@ export const BannerContainer = styled.div`
   margin-top: 40px;
   justify-content: space-around;
   overflow: hidden;
-  border-radius: 500px;
+  border-radius: 50px;
   box-shadow: 0 0 25px -13px #1d3557;
   text-align: center;
   position: relative;
+  max-width: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  > * {
+    &:nth-child(2) {
+      margin-top: 30px;
+    }
+  }
 
   @media screen and (max-width: 1305px) {
     border-radius: 50px;
@@ -21,15 +31,6 @@ export const BannerBox = styled.div`
   background: #f1faee;
   position: absolute;
   border-radius: 5px;
-`;
-
-export const CompanySpan = styled.h2`
-  position: relative;
-  color: #264653;
-  margin: 25px;
-  font-size: clamp(2rem, 8vw, 5rem);
-  font-family: "Courgette", cursive;
-  text-shadow: 5px 5px #d3d3d3;
 `;
 
 export const Logo = styled.img`
@@ -62,4 +63,5 @@ export const LogoContainer = styled.div`
   opacity: 0.6;
   filter: brightness(125%);
   top: 30px;
+  margin-top: 30px;
 `;

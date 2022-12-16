@@ -1,8 +1,6 @@
 import * as Styled from "./navigation.styles";
 import { Outlet } from "react-router-dom";
-import Button, {
-  BUTTON_TYPE_CLASSES,
-} from "../../components/button/button.component";
+import Button, { BUTTON_TYPE_CLASSES } from "../../components/button/button.component";
 import { useState } from "react";
 import Logo from "../../components/logo/logo.component";
 import Footer from "../../components/footer/footer.component";
@@ -26,27 +24,11 @@ const Navigation = () => {
         </Styled.MenuIconContainer>
 
         <Styled.NavLinks isClicked={click}>
-          <Styled.NavItem>
-            <Styled.NavLink to="/about" onClick={closeDropdown}>
-              ABOUT ME
-            </Styled.NavLink>
-          </Styled.NavItem>
-
-          <Styled.NavItem>
-            <Styled.NavLink to="/videos" onClick={closeDropdown}>
-              VIDEOS
-            </Styled.NavLink>
-          </Styled.NavItem>
-
-          <Styled.NavItem
-            onClick={() => navigator.clipboard.writeText("james@seenit.io")}
-          >
+          <Styled.NavItem onClick={() => navigator.clipboard.writeText("james@seenit.io")}>
             {
               <Link to="/contact" onClick={closeDropdown}>
                 {isWide ? (
-                  <Button buttonType={BUTTON_TYPE_CLASSES.contact}>
-                    CONTACT ME
-                  </Button>
+                  <Button buttonType={BUTTON_TYPE_CLASSES.contact}>CONTACT ME</Button>
                 ) : (
                   <Styled.NavLink as="span">CONTACT ME</Styled.NavLink>
                 )}

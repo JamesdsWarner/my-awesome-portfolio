@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import myImage from "../../assets/image50-modified (1).png";
-import myImageBackground from "../../assets/image50-modified-modified.png";
+import myImage from "../../assets/images/image50-modified (1).png";
+import myImageBackground from "../../assets/images/image50-modified-modified.png";
 
 export const HomeContainer = styled.div`
   display: flex;
@@ -25,7 +25,7 @@ export const HomeBorderBackground = styled.div`
 
 export const HomeGradientBackground = styled.div`
   width: 100%;
-  min-height: 101vw;
+  min-height: 95vw;
   position: relative;
   background-image: linear-gradient(to bottom right, #c4dbf6, #3b8beb);
 `;
@@ -38,8 +38,6 @@ export const LineBreak = styled.hr`
   width: 60px;
 `;
 
-export const HomeTitle = styled.h2``;
-
 export const TitleContainer = styled.div`
   z-index: 0;
   @media screen and (min-width: 961px) {
@@ -47,10 +45,6 @@ export const TitleContainer = styled.div`
   }
 `;
 
-export const SubTitle = styled(HomeTitle)`
-  color: #457b9d;
-  font-size: 30px;
-`;
 export const IntroductionContainer = styled.div`
   flex-wrap: wrap;
   display: flex;

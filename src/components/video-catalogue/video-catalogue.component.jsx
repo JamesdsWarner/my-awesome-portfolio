@@ -31,7 +31,8 @@ const VideoCatalogue = () => {
   const VideoArray = [
     {
       video: "https://dx501lltpgacl.cloudfront.net/videos/Amazon+-+Sustainability+Challenge.mp4",
-      thumbnail: "https://dx501lltpgacl.cloudfront.net/thumbnails/AmazonSustainabilityChallenge.mp4.png",
+      thumbnail:
+        "https://dx501lltpgacl.cloudfront.net/thumbnails/AmazonSustainabilityChallenge.mp4.png",
       id: 1,
     },
     {
@@ -45,8 +46,10 @@ const VideoCatalogue = () => {
       id: 3,
     },
     {
-      video: "https://dx501lltpgacl.cloudfront.net/videos/Seenit+-+Employee+Spotlight+(CS+-+Roxane).mp4",
-      thumbnail: "https://dx501lltpgacl.cloudfront.net/thumbnails/SeenitEmployeeSpotlight(CSRoxane).mp4.png",
+      video:
+        "https://dx501lltpgacl.cloudfront.net/videos/Seenit+-+Employee+Spotlight+(CS+-+Roxane).mp4",
+      thumbnail:
+        "https://dx501lltpgacl.cloudfront.net/thumbnails/SeenitEmployeeSpotlight(CSRoxane).mp4.png",
       id: 4,
     },
     {
@@ -77,9 +80,9 @@ const VideoCatalogue = () => {
           simulateTouch={false}
           shortSwiper={false}
         >
-          {VideoArray.map((video) => {
+          {VideoArray.map((video, i) => {
             return (
-              <SwiperSlide onClick={() => openModal(video.video)}>
+              <SwiperSlide onClick={() => openModal(video.video)} key={i}>
                 <Styled.IconWrapper className="icon">{circleIcon}</Styled.IconWrapper>
                 <img src={video.thumbnail} />
               </SwiperSlide>

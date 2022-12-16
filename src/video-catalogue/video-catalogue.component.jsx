@@ -4,6 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 const circleIcon = <FontAwesomeIcon icon={faCirclePlay} />;
+import Typography from "../components/Typography/typography.component";
 
 const VideoCatalogue = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -16,8 +17,7 @@ const VideoCatalogue = () => {
 
   const VideoArray = [
     {
-      filename:
-        "https://dx501lltpgacl.cloudfront.net/Amazon+-+Sustainability+Challenge.mp4",
+      filename: "https://dx501lltpgacl.cloudfront.net/Amazon+-+Sustainability+Challenge.mp4",
       id: 1,
     },
     {
@@ -25,8 +25,7 @@ const VideoCatalogue = () => {
       id: 2,
     },
     {
-      filename:
-        "https://dx501lltpgacl.cloudfront.net/H%26M+-+Community+Meet+Up.mp4",
+      filename: "https://dx501lltpgacl.cloudfront.net/H%26M+-+Community+Meet+Up.mp4",
       id: 3,
     },
     {
@@ -35,8 +34,7 @@ const VideoCatalogue = () => {
       id: 4,
     },
     {
-      filename:
-        "https://dx501lltpgacl.cloudfront.net/Sony+-+Customer+Showcase.mp4",
+      filename: "https://dx501lltpgacl.cloudfront.net/Sony+-+Customer+Showcase.mp4",
       id: 5,
     },
     {
@@ -47,7 +45,7 @@ const VideoCatalogue = () => {
 
   return (
     <Styled.VideoCatalogueContainer>
-      <h2>Here's what I've done...</h2>
+      <Typography type="heading">Here's what I've done...</Typography>
       <Styled.CarouselStyled
         centerMode
         showArrows

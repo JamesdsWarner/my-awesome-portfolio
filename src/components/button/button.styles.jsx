@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const mainColor = "#242222";
-const contactColor = "#1888ff";
+const mainColor = "#19191A";
+const contactColor = "#3B8BEB";
 
 export const ButtonContainer = styled.div`
   /* margin: auto; */
@@ -13,27 +13,27 @@ export const ButtonContainer = styled.div`
 export const BaseButton = styled.button`
   background-position: center;
   background-color: ${mainColor};
-  padding: 8px 20px;
-  border-radius: 4px;
+  padding: 12px 22px;
+  border-radius: 50px;
   outline: none;
   border: none;
-  font-size: 18px;
+  font-size: 14px;
   color: #fff;
   cursor: pointer;
   z-index: 10;
+  transition: all 0.2s ease-out;
+  border: 2px solid ${contactColor};
 
   &:hover {
-    padding: 6px 18px;
     transition: all 0.2s ease-out;
     background-color: #fff;
     color: ${mainColor};
-    border-radius: 4px;
-    border: 2px solid ${mainColor};
   }
 `;
 
 export const ContactButton = styled(BaseButton)`
   background-color: ${contactColor};
+  color: #fff;
 
   &:before {
     content: "";
@@ -50,57 +50,22 @@ export const ContactButton = styled(BaseButton)`
     border-right: 5px solid transparent;
     border-bottom: 5px solid rgba(255, 255, 255, 0.72);
   }
-
-  /* &:after {
-    content: "Copy email to Clipboard";
-    display: none;
-    position: absolute;
-    z-index: 9999;
-    top: 65px;
-    -ms-transform: translate(450%, -50%);
-    transform: translate(-5%, 0%);
-    width: 114px;
-    height: 36px;
-    color: #000;
-    font-size: 10px;
-    line-height: 36px;
-    text-align: center;
-
-    background: rgba(255, 255, 255, 0.72);
-    border-radius: 3px;
-  }
-
-  &:hover {
-    color: ${contactColor};
-    &:before,
-    &:after {
-      display: block;
-    }
-  }
-
-  &:active,
-  &:focus {
-    outline: none;
-
-    &:after {
-      content: "Email Copied!";
-    }
-  } */
 `;
 
 export const LargeBaseButton = styled(BaseButton)`
-  font-size: 24px;
+  font-size: 14px;
   box-shadow: rgba(0, 0, 0, 0.2) -1.95px -1.95px 4.6px;
 
   &:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 1.95px 1.95px 10.6px;
+    box-shadow: rgba(0, 0, 0, 0.2) 1.95px 1.95px 10.6px;
   }
 `;
 
 export const LargeContactButton = styled(BaseButton)`
   background-color: ${contactColor};
-  font-size: 24px;
+  font-size: 18px;
   box-shadow: rgba(0, 0, 0, 0.25) 1.95px 1.95px 4.6px;
+  color: #fff;
 
   &:hover {
     color: ${contactColor};
