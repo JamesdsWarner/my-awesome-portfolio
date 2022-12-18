@@ -6,10 +6,7 @@ const Banner = () => {
     <>
       <Styled.BannerContainer>
         <Styled.BannerBox />
-
-        <Typography size="large" type="fancy">
-          Companies I've worked with
-        </Typography>
+        <Typography type="fancy">Companies I've worked with</Typography>{" "}
         <Styled.LogoContainer>
           <Styled.Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1206px-Amazon_logo.svg.png" />
           <Styled.Logo src="https://upload.wikimedia.org/wikipedia/commons/5/53/H%26M-Logo.svg" />

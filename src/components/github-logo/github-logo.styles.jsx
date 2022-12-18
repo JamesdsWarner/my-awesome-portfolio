@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import GithubLogo from "../../assets/images/seenit-logo-brand-white-rgb.png";
+import GithubLogo from "../../assets/images/Github-logo.svg.png";
 
 export const GithubLogoContainer = styled.div`
   object-fit: contain;
-  width: 250px;
+  width: 70px;
+  margin-right: 50px;
 `;
 
 export const GithubLogoImage = styled.img.attrs({

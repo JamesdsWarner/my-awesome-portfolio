@@ -1,14 +1,19 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.div`
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-  height: 200px;
+  background-color: #fbfbff;
+  height: 100px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1rem;
   color: white;
   flex-wrap: nowrap;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  z-index: 9999;
+  bottom: 0;
+  position: relative;
 `;
 
 export const ContactWrapper = styled.div`

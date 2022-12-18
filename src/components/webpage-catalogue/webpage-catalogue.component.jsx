@@ -7,6 +7,11 @@ import WebpageImage from "../webpage-image/webpage-image.component";
 const WebpageCatalogue = () => {
   const [isHovered, setIsHovered] = useState(false);
 
+  const linksObject = {
+    0: "https://musical-cobbler-48ef86.netlify.app/",
+    1: "https://jameswarner.netlify.app/",
+  };
+
   const importAll = (r) => {
     return r.keys().map(r);
   };
@@ -18,16 +23,18 @@ const WebpageCatalogue = () => {
   return (
     <Styled.WebpageCatalogueContainer>
       <Typography size="large" type="fancy">
-        Web Development work
+        Web Development
       </Typography>
       {filenames.map((filename, i) => {
         return (
-          <WebpageImage
-            key={i}
-            filename={filename}
-            setIsHovered={setIsHovered}
-            isHovered={isHovered}
-          />
+          <a href={linksObject[i]}>
+            <WebpageImage
+              key={i}
+              filename={filename}
+              setIsHovered={setIsHovered}
+              isHovered={isHovered}
+            />
+          </a>
         );
       })}
     </Styled.WebpageCatalogueContainer>

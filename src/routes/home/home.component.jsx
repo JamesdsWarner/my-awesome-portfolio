@@ -30,7 +30,7 @@ const Home = () => {
                 <Styled.ButtonsContainer>
                   {" "}
                   <Link to="/contact">
-                    <Button buttonType="contact-large">CONTACT ME</Button>
+                    <Button buttonType="contact-large">Contact me</Button>
                   </Link>
                 </Styled.ButtonsContainer>
               </Styled.IntroductionContainer>
@@ -38,8 +38,11 @@ const Home = () => {
               <Styled.LineBreak />
               <WebpageCatalogue />
               <Styled.LineBreak />
-              <Banner />
+              <Typography size="large" type="fancy">
+                Video Editing{" "}
+              </Typography>
               <VideoCatalogue />
+              <Banner />
             </Styled.HomeContainer>
           </Styled.HomeBackground>
         </Styled.HomeBorderBackground>

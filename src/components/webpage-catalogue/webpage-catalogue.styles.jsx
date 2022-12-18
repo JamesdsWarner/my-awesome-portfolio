@@ -6,4 +6,10 @@ export const WebpageCatalogueContainer = styled.div`
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+
+  > * {
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
 `;

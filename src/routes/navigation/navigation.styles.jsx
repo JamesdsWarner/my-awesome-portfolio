@@ -42,13 +42,31 @@ const NavMenuActive = css`
   }
 `;
 
+export const App = styled.div`
+  display: flex;
+  min-height: 92vh;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+export const EntireApp = styled.div`
+  background-image: linear-gradient(to bottom right, #c4dbf6, #3b8beb);
+`;
+
+export const EntireAppOverlay = styled.div`
+  background-image: url("https://www.transparenttextures.com/patterns/french-stucco.png");
+`;
+
 export const NavigationContainer = styled.div`
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  background-color: #fbfbff;
   height: 80px;
   display: flex;
   justify-content: space-between;
+  z-index: 99999;
   align-items: center;
   font-size: 1.2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  position: relative;
 `;
 
 export const MenuIcon = styled.i`

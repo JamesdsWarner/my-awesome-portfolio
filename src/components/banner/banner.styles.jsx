@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BannerContainer = styled.div`
-  margin-top: 40px;
+  margin-bottom: 60px;
   justify-content: space-around;
   overflow: hidden;
   border-radius: 50px;
@@ -28,7 +28,7 @@ export const BannerContainer = styled.div`
 export const BannerBox = styled.div`
   height: 900px;
   width: 100%;
-  background: #f1faee;
+  background: #fbfbff;
   position: absolute;
   border-radius: 5px;
 `;

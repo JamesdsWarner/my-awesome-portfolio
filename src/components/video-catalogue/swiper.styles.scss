@@ -1,6 +1,5 @@
 .swiper {
   overflow: visible;
-  margin-top: 20px;
 }
 .swiper-container {
   width: 100%;
@@ -9,7 +8,6 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   height: 15vw;
   cursor: pointer;
   
@@ -53,10 +51,7 @@ h1 {
   .swiper-slide {
       transition: 250ms all;
 
-      &:hover {
-          transform: scale(1.2);
-          z-index: 1;
-      }
+
 
       &:first-child:hover{
           margin:0 40px;

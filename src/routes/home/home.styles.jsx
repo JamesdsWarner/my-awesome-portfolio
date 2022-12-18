@@ -28,6 +28,7 @@ export const HomeGradientBackground = styled.div`
   min-height: 95vw;
   position: relative;
   background-image: linear-gradient(to bottom right, #c4dbf6, #3b8beb);
+  overflow: hidden;
 `;
 
 export const LineBreak = styled.hr`
@@ -41,7 +42,7 @@ export const LineBreak = styled.hr`
 export const TitleContainer = styled.div`
   z-index: 0;
   @media screen and (min-width: 961px) {
-    margin-top: 120px;
+    margin-top: 115px;
   }
 `;
 
@@ -49,15 +50,17 @@ export const IntroductionContainer = styled.div`
   flex-wrap: wrap;
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 60px;
+  flex-direction: column;
 
   @media screen and (min-width: 961px) {
     flex-direction: row;
-    gap: 40px;
   }
 `;
 
 export const MainImageContainer = styled.div`
-  margin-top: 30px;
+  margin-top: 80px;
+  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
 
@@ -67,19 +70,10 @@ export const MainImageContainer = styled.div`
   position: relative;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-  @media screen and (min-width: 961px) {
-    margin-top: 90px;
-  }
-
-  @media screen and (min-width: 961px) and (max-width: 1420px) {
-    height: 45%;
-    width: 45%;
-  }
-
-  @media screen and (min-width: 1421px) {
-    width: 493px;
-  }
+  width: 50vw;
+  height: 50vw;
+  max-width: 280px;
+  max-height: 280px;
 
   &:hover {
     transform: scale(1.1);
@@ -89,7 +83,6 @@ export const MainImageContainer = styled.div`
 export const MainImage = styled.img.attrs({
   src: `${myImage}`,
 })`
-  width: 100%;
   &:hover {
     opacity: 0;
   }
@@ -115,7 +108,7 @@ export const DescriptionText = styled.span`
   @media screen and (min-width: 961px) {
     position: absolute;
     width: 32%;
-    margin-top: 290px;
+    margin-top: 230px;
     left: 11.45vw;
   }
 `;
@@ -124,11 +117,10 @@ export const ButtonsContainer = styled.div`
   margin-top: 30px;
   display: flex;
   justify-content: space-around;
-  width: 100%;
   @media screen and (min-width: 961px) {
     position: absolute;
     width: 40%;
-    margin-top: 400px;
+    margin-top: 430px;
     justify-content: flex-start;
     left: 11.45vw;
   }

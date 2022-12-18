@@ -16,10 +16,9 @@ export const Fancy = styled.h3`
   position: relative;
   text-align: center;
   font-family: "Courgette", cursive;
-  font-size: ${(props) => (props.size === "large" ? 3.5 : props.size === "regular" ? 3 : 3)}rem;
-  color: #264653;
+  font-size: ${(props) => (props.size === "large" ? 3 : props.size === "regular" ? 2.5 : 2.5)}rem;
+  color: #${(props) => (props.color ? props.color : 264653)};
   text-shadow: 5px 5px #d3d3d3;
-  z-index: 9999;
 `;
 
 export const Heading = styled.h2``;

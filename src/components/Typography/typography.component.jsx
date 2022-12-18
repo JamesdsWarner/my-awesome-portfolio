@@ -14,11 +14,13 @@ const getTypography = (type = TYPOGRAPHY_TYPE_CLASSES.base) =>
     [TYPOGRAPHY_TYPE_CLASSES.heading]: Styled.Heading,
     [TYPOGRAPHY_TYPE_CLASSES.secondHeading]: Styled.SecondHeading,
   }[type]);
-const Typography = ({ size, type, children, ...otherProps }) => {
+const Typography = ({ color, size, type, children, ...otherProps }) => {
   const CustomTypography = getTypography(type);
   return (
     <Styled.TypographyContainer {...otherProps}>
-      <CustomTypography size={size}>{children}</CustomTypography>
+      <CustomTypography color={color} size={size}>
+        {children}
+      </CustomTypography>
     </Styled.TypographyContainer>
   );
 };

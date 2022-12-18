@@ -1,21 +1,21 @@
 import * as Styled from "./video-catalogue.styles";
 import { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import { Pagination, Navigation } from "swiper";
-
+import SwiperSlideVideo from "../swiper-slide-video/swiper-slide-video.component";
+import { SwiperSlide } from "swiper/react";
+import Typography from "../Typography/typography.component";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./swiper.styles.scss";
-const circleIcon = <FontAwesomeIcon icon={faCirclePlay} />;
 
 const VideoCatalogue = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [modalVideo, setModalVideo] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   const toggleModal = () => setIsOpen(!modalIsOpen);
 
@@ -66,7 +66,7 @@ const VideoCatalogue = () => {
 
   return (
     <Styled.VideoCatalogueContainer>
-      <h2>Here's what I've done...</h2>
+      <Typography type="second-heading">Here's what I've done...</Typography>
       <Styled.VideoArrayContainer>
         <Swiper
           slidesPerView={3}
@@ -82,9 +82,14 @@ const VideoCatalogue = () => {
         >
           {VideoArray.map((video, i) => {
             return (
-              <SwiperSlide onClick={() => openModal(video.video)} key={i}>
-                <Styled.IconWrapper className="icon">{circleIcon}</Styled.IconWrapper>
-                <img src={video.thumbnail} />
+              <SwiperSlide onClick={() => openModal(video.video)}>
+                <SwiperSlideVideo
+                  video={video}
+                  openModal={openModal}
+                  isHovered={isHovered}
+                  setIsHovered={setIsHovered}
+                  key={i}
+                />
               </SwiperSlide>
             );
           })}

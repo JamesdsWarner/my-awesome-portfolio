@@ -4,7 +4,16 @@ export const ContactContainer = styled.div`
   font-size: 30px;
   text-align: center;
   width: 40%;
-  margin: 120px auto 140px;
+  min-width: 200px;
+  margin: auto;
+  padding-top: 10%;
+`;
+
+export const ContactPageContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 `;
 
 export const ContactBox = styled(ContactContainer)`
@@ -37,28 +46,30 @@ export const FormInput = styled.input`
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border: 0;
   display: block;
-  width: 25vw;
+  width: 15vw;
+  min-width: 200px;
 `;
 
 export const Message = styled.textarea`
   padding: 10px;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  width: 25vw;
+  width: 15vw;
+  min-width: 200px;
   border: 0;
   height: 100px;
   margin-bottom: 15px;
 `;
 
 export const ThankYouContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 300px;
   justify-content: center;
-  height: 665px;
+  text-align: center;
+`;
 
-  & h3 {
-    margin-bottom: 30px;
-  }
+export const ThankYouButtonWrapper = styled.div`
+  margin-top: 30px;
 `;

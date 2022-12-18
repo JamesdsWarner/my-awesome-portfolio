@@ -9,4 +9,6 @@ export const WebpageImageWrapper = styled.div`
   transform: scale(${(props) => (props.isHovered ? (props.hovered ? 1.05 : 0.95) : 1)});
 `;
 
-export const WebpageImage = styled.img``;
+export const WebpageImage = styled.img`
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+`;

@@ -9,23 +9,24 @@ Modal.defaultStyles.overlay.zIndex = 1000;
 export const CarouselStyled = styled(Carousel)`
   margin-top: 40px;
   & .slide.selected {
-    /* min-width: 150%; */
   }
 `;
 
 export const VideoCatalogueContainer = styled.div`
-  margin-top: 50px;
-  margin-bottom: 90px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  > * {
+    &:first-child {
+      > * {
+        color: #fbfbff;
+        font-weight: 800;
+        text-shadow: 0.5px 0.5px 2px #000;
+      }
+    }
+  }
 `;
 
-export const VideoArrayContainer = styled.div`
-  /* justify-content: center;
-  flex-wrap: wrap;
-  display: flex;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  background: #eee; */
-`;
+export const VideoArrayContainer = styled.div``;
 
 export const VideoWrapper = styled.div`
   margin: auto;
@@ -40,15 +41,6 @@ export const ModalContainer = styled.div`
     zindex: 1000;
   }
 `;
-
-// export const Slide = styled(SwiperSlide)`
-//   img {
-//     display: block;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
-// `;
 
 export const StyledModal = styled(Modal)`
   position: absolute;
@@ -65,31 +57,11 @@ export const StyledModal = styled(Modal)`
 
 export const ThumbnailWrapper = styled.span`
   filter: brightness(75%);
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 
   & .react-thumbnail-generator {
     height: 366px;
   }
-`;
-
-export const IconWrapper = styled.div`
-  position: absolute;
-  z-index: 1;
-  left: 50%;
-  top: 50%;
-  pointer-events: none;
-  display: none;
-
-  & .fa-circle-play {
-    color: #e5e5e5;
-    font-size: 1.5em;
-    &:hover {
-      filter: brightness(125%);
-    }
-  }
-
-  ${({ modalIsOpen }) => modalIsOpen && "display: none"};
 `;
 
 export const ThumbnailContainer = styled.div`
@@ -105,14 +77,12 @@ export const ThumbnailContainer = styled.div`
   &:hover {
     & ${ThumbnailWrapper} {
       filter: brightness(50%);
-      -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease;
       cursor: pointer;
     }
 
     & .fa-circle-play {
       filter: brightness(100%);
-      -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease;
       cursor: pointer;
     }

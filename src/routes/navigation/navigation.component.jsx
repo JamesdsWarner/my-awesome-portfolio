@@ -6,6 +6,7 @@ import Logo from "../../components/logo/logo.component";
 import Footer from "../../components/footer/footer.component";
 import { useWindowSize } from "../../utils/responsive.helper";
 import { Link } from "react-router-dom";
+import GithubLogo from "../../components/github-logo/github-logo.component";
 
 const Navigation = () => {
   const [click, setClick] = useState(false);
@@ -17,28 +18,18 @@ const Navigation = () => {
 
   return (
     <>
-      <Styled.NavigationContainer>
-        <Logo />
-        <Styled.MenuIconContainer onClick={handleClick}>
-          <Styled.MenuIcon className={click ? "fas fa-times" : "fas fa-bars"} />
-        </Styled.MenuIconContainer>
-
-        <Styled.NavLinks isClicked={click}>
-          <Styled.NavItem onClick={() => navigator.clipboard.writeText("james@seenit.io")}>
-            {
-              <Link to="/contact" onClick={closeDropdown}>
-                {isWide ? (
-                  <Button buttonType={BUTTON_TYPE_CLASSES.contact}>CONTACT ME</Button>
-                ) : (
-                  <Styled.NavLink as="span">CONTACT ME</Styled.NavLink>
-                )}
-              </Link>
-            }
-          </Styled.NavItem>
-        </Styled.NavLinks>
-      </Styled.NavigationContainer>
-      <Outlet />
-      <Footer />
+      <Styled.EntireApp>
+        <Styled.EntireAppOverlay>
+          <Styled.NavigationContainer>
+            <Logo />
+            <GithubLogo />
+          </Styled.NavigationContainer>
+          <Styled.App>
+            <Outlet />
+            <Footer />
+          </Styled.App>
+        </Styled.EntireAppOverlay>
+      </Styled.EntireApp>
     </>
   );
 };
