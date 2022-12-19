@@ -18,8 +18,8 @@ export const WebpageLinkText = styled.h4`
   color: white;
 
   @media screen and (max-width: 1081px) {
-    font-size: 10px;
-    height: 10px;
+    font-size: 2vw;
+    height: 20px;
     width: 200px;
   }
 `;
