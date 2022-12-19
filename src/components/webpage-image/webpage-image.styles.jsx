@@ -16,6 +16,12 @@ export const WebpageLinkText = styled.h4`
   opacity: 0;
   pointer-events: none;
   color: white;
+
+  @media screen and (max-width: 1081px) {
+    font-size: 10px;
+    height: 10px;
+    width: 200px;
+  }
 `;
 
 export const WebpageImageWrapper = styled.div`
