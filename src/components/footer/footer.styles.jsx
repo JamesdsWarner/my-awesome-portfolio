@@ -11,7 +11,7 @@ export const FooterContainer = styled.div`
   color: white;
   flex-wrap: nowrap;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  z-index: 9999;
+  z-index: 999;
   bottom: 0;
   position: relative;
 `;
