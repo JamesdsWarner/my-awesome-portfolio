@@ -3,13 +3,11 @@ import styled from "styled-components";
 export const WebpageLinkText = styled.h4`
   position: absolute;
   font-size: 20px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 500px;
-  height: 40px;
-  top: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   z-index: 999;
   transition: all 300ms ease 0s;
@@ -17,10 +15,8 @@ export const WebpageLinkText = styled.h4`
   pointer-events: none;
   color: white;
 
-  @media screen and (max-width: 1081px) {
-    font-size: 2vw;
-    height: 20px;
-    width: 200px;
+  @media screen and (max-width: 1275px) {
+    font-size: 1.75vw;
   }
 `;
 
