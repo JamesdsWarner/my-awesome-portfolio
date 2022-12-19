@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect, useRef } from "react";
+import { useState } from "react";
 
 import * as Styled from "./webpage-image.styles";
 
