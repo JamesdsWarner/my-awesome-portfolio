@@ -17,7 +17,7 @@ export const SkillsContainer = styled.div`
 
 export const SkillsLogo = styled.img`
   max-width: 100%;
-  max-height: 100%;
+  max-height: 118px;
 `;
 
 export const SkillsLogoWrapper = styled.span`
