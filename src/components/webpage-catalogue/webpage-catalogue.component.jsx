@@ -21,7 +21,7 @@ const WebpageCatalogue = () => {
     3: "To-Do app",
   };
 
-  const webpageImageName = ["Blog", "To-Do", "Portfolio", "Pokedex"];
+  const webpageImageName = ["Blog", "Pokedex", "Portfolio", "To-Do"];
 
   return (
     <Styled.WebpageCatalogueContainer>
