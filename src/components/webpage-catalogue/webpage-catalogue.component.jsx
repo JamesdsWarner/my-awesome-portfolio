@@ -32,7 +32,7 @@ const WebpageCatalogue = () => {
         return (
           <a target="_blank" rel="noreferrer" href={linksObject[i]} key={i}>
             <WebpageImage
-              source={`https://res.cloudinary.com/dbq4xtolf/image/upload/w_0.2,h_0.2,c_scale/portfolio/${filename}.webp`}
+              source={`https://res.cloudinary.com/dbq4xtolf/image/upload/w_0.3,h_0.3,c_scale/portfolio/${filename}.webp`}
               setIsHovered={setIsHovered}
               isHovered={isHovered}
               text={linksText[i]}
