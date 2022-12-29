@@ -7,11 +7,8 @@ export const SkillsContainer = styled.div`
   justify-content: center;
   gap: 6%;
   z-index: 1;
-
-  @media screen and (min-width: 961px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const SkillsLogo = styled.img`
