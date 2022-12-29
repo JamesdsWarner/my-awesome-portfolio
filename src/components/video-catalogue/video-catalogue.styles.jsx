@@ -2,7 +2,6 @@ import styled from "styled-components";
 import ReactPlayer from "react-player/lazy";
 import Modal from "react-modal";
 import { Carousel } from "react-responsive-carousel";
-import { Swiper, SwiperSlide, SwiperStyle } from "swiper/react";
 Modal.defaultStyles.overlay.backgroundColor = "rgba(0, 0, 0, 0.75)";
 Modal.defaultStyles.overlay.zIndex = 1000;
 

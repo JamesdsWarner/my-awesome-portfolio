@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import * as Styled from "./webpage-image.styles";
 
-const WebpageImage = ({ filename, isHovered, setIsHovered, text }) => {
+const WebpageImage = ({ source, isHovered, setIsHovered, text, filename }) => {
   const [hovered, setHovered] = useState(false);
 
   const handleHoverEnter = () => {
@@ -23,7 +23,7 @@ const WebpageImage = ({ filename, isHovered, setIsHovered, text }) => {
       onMouseLeave={handleHoverLeave}
     >
       <Styled.WebpageLinkText>{text}</Styled.WebpageLinkText>
-      <Styled.WebpageImage src={filename} />
+      <Styled.WebpageImage alt={`${filename} image`} src={source} loading="lazy" />
     </Styled.WebpageImageWrapper>
   );
 };

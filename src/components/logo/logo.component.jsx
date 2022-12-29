@@ -2,7 +2,7 @@ import * as Styled from "./logo.styles";
 
 const Logo = () => {
   return (
-    <Styled.LogoContainer to="/">
+    <Styled.LogoContainer aria-label="Homepage" to="/">
       <Styled.StyledLogo />
     </Styled.LogoContainer>
   );

@@ -21,28 +21,22 @@ const WebpageCatalogue = () => {
     3: "To-Do app",
   };
 
-  const importAll = (r) => {
-    return r.keys().map(r);
-  };
-
-  const filenames = importAll(
-    require.context("../../assets/images/webpage-images", false, /\.(png|jpe?g|svg)$/)
-  );
+  const webpageImageName = ["Blog", "To-Do", "Portfolio", "Pokedex"];
 
   return (
     <Styled.WebpageCatalogueContainer>
       <Typography size="large" type="fancy">
         Web Development
       </Typography>
-      {filenames.map((filename, i) => {
+      {webpageImageName.map((filename, i) => {
         return (
-          <a target="_blank" rel="noreferrer" href={linksObject[i]}>
+          <a target="_blank" rel="noreferrer" href={linksObject[i]} key={i}>
             <WebpageImage
-              key={i}
-              filename={filename}
+              source={`https://res.cloudinary.com/dbq4xtolf/image/upload/w_0.2,h_0.2,c_scale/portfolio/${filename}.webp`}
               setIsHovered={setIsHovered}
               isHovered={isHovered}
               text={linksText[i]}
+              altText={filename}
             />
           </a>
         );

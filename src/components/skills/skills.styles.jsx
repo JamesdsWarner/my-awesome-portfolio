@@ -9,7 +9,6 @@ export const SkillsContainer = styled.div`
   z-index: 1;
 
   @media screen and (min-width: 961px) {
-    width: 740.156px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -17,12 +16,12 @@ export const SkillsContainer = styled.div`
 
 export const SkillsLogo = styled.img`
   max-width: 100%;
-  max-height: 118px;
+  max-height: 150px;
 `;
 
 export const SkillsLogoWrapper = styled.span`
-  width: 15%;
-  @media screen and (max-width: 961px) {
-    width: 112px;
-  }
+  scale: 0.8;
+  /* @media screen and (max-width: 961px) {
+    scale: 0.8;
+  } */
 `;

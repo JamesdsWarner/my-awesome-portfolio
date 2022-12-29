@@ -1,11 +1,7 @@
 import * as Styled from "./swiper-slide-video.styles";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 
-const circleIcon = <FontAwesomeIcon icon={faCirclePlay} />;
-
-const SwiperSlideVideo = ({ video, isHovered, setIsHovered }) => {
+const SwiperSlideVideo = ({ source, isHovered, setIsHovered, videoFilename }) => {
   const [hovered, setHovered] = useState(false);
 
   const handleHoverEnter = () => {
@@ -20,13 +16,14 @@ const SwiperSlideVideo = ({ video, isHovered, setIsHovered }) => {
 
   return (
     <>
-      <Styled.IconWrapper className="icon">{circleIcon}</Styled.IconWrapper>
       <Styled.SwiperSlideVideoThumbnail
         isHovered={isHovered}
         hovered={hovered}
         onMouseEnter={handleHoverEnter}
         onMouseLeave={handleHoverLeave}
-        src={video.thumbnail}
+        alt={`Video file: ${videoFilename} thumbnail`}
+        loading="lazy"
+        src={source}
       />
     </>
   );

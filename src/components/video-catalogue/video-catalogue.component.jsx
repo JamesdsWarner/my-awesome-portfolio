@@ -28,40 +28,13 @@ const VideoCatalogue = () => {
     toggleModal();
   };
 
-  const VideoArray = [
-    {
-      video: "https://dx501lltpgacl.cloudfront.net/videos/Amazon+-+Sustainability+Challenge.mp4",
-      thumbnail:
-        "https://dx501lltpgacl.cloudfront.net/thumbnails/AmazonSustainabilityChallenge.mp4.png",
-      id: 1,
-    },
-    {
-      video: "https://dx501lltpgacl.cloudfront.net/videos/Amazon+X+Seenit.mp4",
-      thumbnail: "https://dx501lltpgacl.cloudfront.net/thumbnails/AmazonXSeenit.mp4.png",
-      id: 2,
-    },
-    {
-      video: "https://dx501lltpgacl.cloudfront.net/videos/HandM+-+Community+Meet+Up.mp4",
-      thumbnail: "https://dx501lltpgacl.cloudfront.net/thumbnails/HandMCommunityMeetUp.mp4.png",
-      id: 3,
-    },
-    {
-      video:
-        "https://dx501lltpgacl.cloudfront.net/videos/Seenit+-+Employee+Spotlight+(CS+-+Roxane).mp4",
-      thumbnail:
-        "https://dx501lltpgacl.cloudfront.net/thumbnails/SeenitEmployeeSpotlight(CSRoxane).mp4.png",
-      id: 4,
-    },
-    {
-      video: "https://dx501lltpgacl.cloudfront.net/videos/Sony+-+Customer+Showcase.mp4",
-      thumbnail: "https://dx501lltpgacl.cloudfront.net/thumbnails/SonyCustomerShowcase.mp4.png",
-      id: 5,
-    },
-    {
-      video: "https://dx501lltpgacl.cloudfront.net/videos/V2.mp4",
-      thumbnail: "https://dx501lltpgacl.cloudfront.net/thumbnails/V2.mp4.png",
-      id: 6,
-    },
+  const VideoFilenameArray = [
+    "AmazonSustainabilityChallenge",
+    "AmazonXSeenit",
+    "HandMCommunityMeetUp",
+    "SeenitEmployeeSpotlightCSRoxane",
+    "SonyCustomerShowcase",
+    "V2",
   ];
 
   return (
@@ -78,17 +51,22 @@ const VideoCatalogue = () => {
           modules={[Pagination, Navigation]}
           className="mySwiper"
           simulateTouch={false}
-          shortSwiper={false}
+          shortswiper="false"
         >
-          {VideoArray.map((video, i) => {
+          {VideoFilenameArray.map((VideoFilename, i) => {
             return (
-              <SwiperSlide onClick={() => openModal(video.video)}>
+              <SwiperSlide
+                onClick={() =>
+                  openModal(`https://dx501lltpgacl.cloudfront.net/videos/${VideoFilename}Video.mp4`)
+                }
+                key={i}
+              >
                 <SwiperSlideVideo
-                  video={video}
+                  source={`https://res.cloudinary.com/dbq4xtolf/image/upload/w_317,h_187,c_scale/portfolio/${VideoFilename}Thumbnail.webp`}
                   openModal={openModal}
                   isHovered={isHovered}
                   setIsHovered={setIsHovered}
-                  key={i}
+                  VideoFilename={VideoFilename}
                 />
               </SwiperSlide>
             );

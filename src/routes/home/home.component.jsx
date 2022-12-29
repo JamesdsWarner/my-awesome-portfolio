@@ -20,8 +20,13 @@ const Home = () => {
                   <Typography type="second-heading">Video Editor/Web Developer</Typography>
                 </Styled.TitleContainer>
                 <Styled.MainImageContainer>
-                  <Styled.MainImageBackground />
-                  <Styled.MainImage />
+                  <Styled.MainImageBackground alt="Profile image background" />
+                  <Styled.MainImage
+                    rel="preload"
+                    as="img"
+                    src="https://res.cloudinary.com/dbq4xtolf/image/upload/w_560,h_560,c_scale/portfolio/main-profile-image.webp"
+                    alt="profile image"
+                  />
                 </Styled.MainImageContainer>
                 <Typography type="base">
                   London based creative & technical professional. Experience in Storytelling, motion

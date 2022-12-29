@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import myImage from "../../assets/images/image50-modified (1).png";
-import myImageBackground from "../../assets/images/image50-modified-modified.png";
 
 export const HomeContainer = styled.div`
   display: flex;
@@ -80,16 +78,14 @@ export const MainImageContainer = styled.div`
   }
 `;
 
-export const MainImage = styled.img.attrs({
-  src: `${myImage}`,
-})`
+export const MainImage = styled.img`
   &:hover {
     opacity: 0;
   }
 `;
 
 export const MainImageBackground = styled.img.attrs({
-  src: `${myImageBackground}`,
+  src: "https://res.cloudinary.com/dbq4xtolf/image/upload/w_560,h_560,c_scale/portfolio/main-profile-image-background.webp",
 })`
   opacity: 0;
   position: absolute;

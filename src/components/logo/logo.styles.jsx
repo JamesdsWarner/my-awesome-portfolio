@@ -15,11 +15,4 @@ export const LogoContainer = styled(Link)`
   font-size: 2rem;
   width: 140px;
   margin-top: 14px;
-
-  /* @media screen and (max-width: 960px) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(25%, 50%);
-    } */
 `;

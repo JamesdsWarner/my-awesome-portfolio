@@ -22,7 +22,7 @@ export const BaseButton = styled.button`
   cursor: pointer;
   z-index: 10;
   transition: all 0.2s ease-out;
-  border: 2px solid ${contactColor};
+  border: 2px solid #2a9d8f;
   font-weight: 700;
 
   &:hover {
@@ -66,14 +66,15 @@ export const LargeBaseButton = styled(BaseButton)`
 `;
 
 export const LargeContactButton = styled(BaseButton)`
-  background-color: ${contactColor};
+  background-color: #2a9d8f;
   font-size: 18px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   color: #fff;
+  border: 2px solid #2a9d8f;
 
   &:hover {
-    color: ${contactColor};
-    border: 2px solid ${contactColor};
+    color: #2a9d8f;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 2px solid #2a9d8f;
   }
 `;

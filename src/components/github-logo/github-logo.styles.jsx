@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import GithubLogo from "../../assets/images/Github-logo.svg.png";
 
 export const GithubLogoContainer = styled.div`
   width: 70px;
@@ -8,7 +7,8 @@ export const GithubLogoContainer = styled.div`
 `;
 
 export const GithubLogoImage = styled.img.attrs({
-  src: `${GithubLogo}`,
+  src: `https://res.cloudinary.com/dbq4xtolf/image/upload/w_0.7,h_0.7,c_scale/portfolio/Github.webp`,
+  alt: "github logo",
 })`
   max-width: 100%;
   max-height: 70px;
