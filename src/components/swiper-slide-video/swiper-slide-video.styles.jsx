@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const SwiperSlideVideoWrapper = styled.div``;
+export const SwiperSlideVideoWrapper = styled.div`
+  width: 77.1vw;
+`;
 
 export const SwiperSlideVideoThumbnail = styled.img`
   transition: all 0.2s ease-out;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SkillsContainer = styled.div`
   margin-top: 30px;
-  width: 100%;
+  width: 77.1vw;
   display: flex;
   justify-content: center;
   gap: 6%;

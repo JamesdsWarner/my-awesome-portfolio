@@ -6,7 +6,6 @@ export const HomeContainer = styled.div`
   flex-wrap: no-wrap;
   justify-content: center;
   font-size: 30px;
-  width: 77.1vw;
   margin: auto;
   padding-top: 40px;
 `;
@@ -47,9 +46,11 @@ export const TitleContainer = styled.div`
 export const IntroductionContainer = styled.div`
   flex-wrap: wrap;
   display: flex;
-  justify-content: flex-start;
   margin-bottom: 60px;
   flex-direction: column;
+  width: 77.1vw;
+  margin-right: auto;
+  margin-left: auto;
 
   @media screen and (min-width: 961px) {
     flex-direction: row;

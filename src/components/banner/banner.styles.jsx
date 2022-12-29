@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const BannerContainer = styled.div`
   margin-bottom: 60px;
+  width: 87.1vw;
+
   justify-content: space-around;
   overflow: hidden;
   border-radius: 50px;
@@ -9,7 +11,6 @@ export const BannerContainer = styled.div`
   text-align: center;
   position: relative;
   max-width: 1000px;
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -17,6 +18,11 @@ export const BannerContainer = styled.div`
   > * {
     &:nth-child(2) {
       margin-top: 30px;
+      > * {
+        @media screen and (min-width: 750px) {
+          font-size: 2.5rem;
+        }
+      }
     }
   }
 
@@ -41,8 +47,8 @@ export const Logo = styled.img`
   margin-bottom: 15px;
 
   :nth-child(2) {
-    height: 60px;
-    margin-top: -12px;
+    height: 40px;
+    margin-top: -3px;
   }
 
   :first-child {
@@ -50,8 +56,8 @@ export const Logo = styled.img`
     margin-top: -2px;
   }
 
-  @media screen and (max-width: 585px) {
-    width: 100px;
+  @media screen and (max-width: 750px) {
+    width: 80px;
   }
 `;
 

@@ -8,7 +8,9 @@ const Banner = () => {
     <>
       <Styled.BannerContainer>
         <Styled.BannerBox />
-        <Typography type="fancy">Companies I've worked with</Typography>{" "}
+        <Typography size="small" type="fancy">
+          Companies I've worked with
+        </Typography>{" "}
         <Styled.LogoContainer>
           {companiesArray.map((company, i) => {
             return (

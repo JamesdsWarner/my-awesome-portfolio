@@ -6,7 +6,9 @@ const Skills = () => {
 
   return (
     <>
-      <Typography type="fancy">My Skills</Typography>
+      <Typography size="large" type="fancy">
+        My Skills
+      </Typography>
       <Styled.SkillsContainer>
         {skillsArray.map((skill, i) => {
           return (

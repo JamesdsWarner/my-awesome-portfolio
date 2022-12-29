@@ -20,12 +20,29 @@ export const VideoCatalogueContainer = styled.div`
         color: #fbfbff;
         font-weight: 800;
         text-shadow: 0.5px 0.5px 2px #000;
+        margin-left: 11.5vw;
       }
     }
   }
 `;
 
-export const VideoArrayContainer = styled.div``;
+export const VideoArrayContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  flex-wrap: wrap;
+
+  > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+`;
+
+export const VideoCarouselContainer = styled.div`
+  width: 77.1vw;
+  margin-left: auto;
+  margin-right: auto;
+`;
 
 export const VideoWrapper = styled.div`
   margin: auto;
