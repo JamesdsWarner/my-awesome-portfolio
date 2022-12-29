@@ -74,6 +74,10 @@ export const MainImageContainer = styled.div`
   max-width: 280px;
   max-height: 280px;
 
+  @media screen and (max-width: 961px) {
+    margin-top: 30px;
+  }
+
   &:hover {
     transform: scale(1.1);
   }
