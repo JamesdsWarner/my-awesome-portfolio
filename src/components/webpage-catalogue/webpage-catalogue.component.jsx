@@ -1,27 +1,27 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import * as Styled from "./webpage-catalogue.styles";
-import Typography from "../Typography/typography.component";
-import WebpageImage from "../webpage-image/webpage-image.component";
+import * as Styled from './webpage-catalogue.styles';
+import Typography from '../Typography/typography.component';
+import WebpageImage from '../webpage-image/webpage-image.component';
 
 const WebpageCatalogue = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const linksObject = {
-    0: "https://musical-cobbler-48ef86.netlify.app/",
-    1: "https://ubiquitous-cascaron-232b69.netlify.app/",
-    2: "https://jameswarner.netlify.app/",
-    3: "https://bejewelled-zuccutto-dfa6b6.netlify.app",
+    0: 'https://musical-cobbler-48ef86.netlify.app/',
+    1: 'https://ubiquitous-cascaron-232b69.netlify.app/',
+    2: 'https://jameswarner.netlify.app/',
+    3: 'https://my-todo-deploy.herokuapp.com/',
   };
 
   const linksText = {
-    0: "Blog using Netlify CMS, GraphQL, SASS and Gatsby",
-    1: "Pokedex app using Pokedex API",
-    2: "Portfolio using React and Styled Components",
-    3: "To-Do app",
+    0: 'Blog using Netlify CMS, GraphQL, SASS and Gatsby',
+    1: 'Pokedex app using Pokedex API',
+    2: 'Portfolio using React and Styled Components',
+    3: 'To-Do app with authenitcated login using MongoDB, an Express server backend and ReactJS client',
   };
 
-  const webpageImageName = ["Blog", "Pokedex", "Portfolio", "To-Do"];
+  const webpageImageName = ['Blog', 'Pokedex', 'Portfolio', 'To-Do'];
 
   return (
     <Styled.WebpageCatalogueContainer>
