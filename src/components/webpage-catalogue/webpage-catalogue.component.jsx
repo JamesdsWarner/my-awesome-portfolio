@@ -9,19 +9,19 @@ const WebpageCatalogue = () => {
 
   const linksObject = {
     0: 'https://musical-cobbler-48ef86.netlify.app/',
-    1: 'https://ubiquitous-cascaron-232b69.netlify.app/',
+    1: 'https://my-todo-deploy.herokuapp.com/',
     2: 'https://jameswarner.netlify.app/',
-    3: 'https://my-todo-deploy.herokuapp.com/',
+    3: 'https://ubiquitous-cascaron-232b69.netlify.app/',
   };
 
   const linksText = {
     0: 'Blog using Netlify CMS, GraphQL, SASS and Gatsby',
-    1: 'Pokedex app using Pokedex API',
+    1: 'To-Do app with authenitcated login using MongoDB, an Express server backend and ReactJS client',
     2: 'Portfolio using React and Styled Components',
-    3: 'To-Do app with authenitcated login using MongoDB, an Express server backend and ReactJS client',
+    3: 'Pokedex app using Pokedex API',
   };
 
-  const webpageImageName = ['Blog', 'Pokedex', 'Portfolio', 'To-Do'];
+  const webpageImageName = ['Blog', 'To-Do', 'Portfolio', 'Pokedex'];
 
   return (
     <Styled.WebpageCatalogueContainer>
