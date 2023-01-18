@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const WebpageLinkText = styled.h4`
   position: absolute;
@@ -21,6 +21,7 @@ export const WebpageLinkText = styled.h4`
 `;
 
 export const WebpageImageWrapper = styled.div`
+  padding: 0 -20px;
   width: 60%;
   max-width: 1000px;
   margin-left: auto;

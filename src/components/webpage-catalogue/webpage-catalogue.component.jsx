@@ -8,20 +8,20 @@ const WebpageCatalogue = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const linksObject = {
-    0: 'https://musical-cobbler-48ef86.netlify.app/',
+    0: 'https://ubiquitous-cascaron-232b69.netlify.app/',
     1: 'https://my-todo-deploy.herokuapp.com/',
-    2: 'https://jameswarner.netlify.app/',
-    3: 'https://ubiquitous-cascaron-232b69.netlify.app/',
+    2: 'https://musical-cobbler-48ef86.netlify.app/',
+    3: 'https://jameswarner.netlify.app/',
   };
 
   const linksText = {
-    0: 'Blog using Netlify CMS, GraphQL, SASS and Gatsby',
+    0: 'Pokedex app using Pokedex API and React Redux state Management',
     1: 'To-Do app with authenitcated login using MongoDB, an Express server backend and ReactJS client',
-    2: 'Portfolio using React and Styled Components',
-    3: 'Pokedex app using Pokedex API',
+    2: 'Blog using Netlify CMS, GraphQL, SASS and Gatsby',
+    3: 'Portfolio using React and Styled Components',
   };
 
-  const webpageImageName = ['Blog', 'To-Do', 'Portfolio', 'Pokedex'];
+  const webpageImageName = ['Pokedex', 'To-Do', 'Blog', 'Portfolio'];
 
   return (
     <Styled.WebpageCatalogueContainer>
