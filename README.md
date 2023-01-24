@@ -2,6 +2,8 @@
 
 A short, single page portfolio built in ReactJS to show off my skills as a web developer and video editor, using examples of my work.
 
+Find the finished product here: https://jameswarner.netlify.app/
+
 ## To run the app please follow the instructions
 
 
